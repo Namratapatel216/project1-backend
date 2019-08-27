@@ -1,6 +1,6 @@
 const appConfing = {};
 
-appConfing.port = "13.127.226.120";
+appConfing.port = "3000";
 appConfing.allowedCorsOrigin = "*";
 appConfing.db = {
     uri : "mongodb://127.0.0.1:27017/Meeting-planning"
