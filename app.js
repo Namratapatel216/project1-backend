@@ -76,6 +76,8 @@ app.listen(appConfig.port, () => {
 
 const server = http.createServer(app);
 
+console.log(server);
+
 // socket io connection handler 
 const socketLib = require("./app/libs/socketLib");
 const socketServer = socketLib.setServer(server);
