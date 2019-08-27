@@ -78,7 +78,7 @@ const server = http.createServer(app);
 
 //const server = "http://api.npatelproject.site";
 
-console.log(server);
+console.log(JSON.stringify(server));
 
 // socket io connection handler 
 const socketLib = require("./app/libs/socketLib");
