@@ -64,7 +64,7 @@ app.use(globalErrorHandler.notFoundHandler);
 
 //const server = http.createServer(app);
 
-let server = app.listen(appConfig.port, () => {
+app.listen(appConfig.port, () => {
 
     console.log(`Example app listening on port ${appConfig.port}!`);
 
@@ -73,6 +73,8 @@ let server = app.listen(appConfig.port, () => {
     console.log(db);
 
 });
+
+const server = http.createServer(app);
 
 // socket io connection handler 
 const socketLib = require("./app/libs/socketLib");
