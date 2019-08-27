@@ -74,9 +74,9 @@ app.listen(appConfig.port, () => {
 
 });
 
-//const server = http.createServer(app);
+const server = http.createServer(app);
 
-const server = "http://api.npatelproject.site";
+//const server = "http://api.npatelproject.site";
 
 console.log(server);
 
