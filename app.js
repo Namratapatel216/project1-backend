@@ -99,7 +99,7 @@ const socketServer = socketLib.setServer(server);
 
 function onError(error) {
   if (error.syscall !== 'listen') {
-    logger.error(error.code + ' not equal listen', 'serverOnErrorHandler', 10)
+    Logger.error(error.code + ' not equal listen', 'serverOnErrorHandler', 10)
     throw error;
   }
 
@@ -107,15 +107,15 @@ function onError(error) {
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
-      logger.error(error.code + ':elavated privileges required', 'serverOnErrorHandler', 10);
+      Logger.error(error.code + ':elavated privileges required', 'serverOnErrorHandler', 10);
       process.exit(1);
       break;
     case 'EADDRINUSE':
-      logger.error(error.code + ':port is already in use.', 'serverOnErrorHandler', 10);
+      Logger.error(error.code + ':port is already in use.', 'serverOnErrorHandler', 10);
       process.exit(1);
       break;
     default:
-      logger.error(error.code + ':some unknown error occured', 'serverOnErrorHandler', 10);
+      Logger.error(error.code + ':some unknown error occured', 'serverOnErrorHandler', 10);
       throw error;
   }
 }
@@ -131,7 +131,7 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   ('Listening on ' + bind);
-  logger.info('server listening on port' + addr.port, 'serverOnListeningHandler', 10);
+  Logger.Info('server listening on port' + addr.port, 'serverOnListeningHandler', 10);
   let db = mongoose.connect(appConfig.db.uri,{ useMongoClient: true });
 }
 
