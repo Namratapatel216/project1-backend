@@ -45,6 +45,8 @@ const redisLibs = require('./RedisLibs');
 
 let setServer = (server) => {
 
+    console.log("server " + server);
+    
     let io = socketio.listen(server);
     
     let myio = io.of('/');
